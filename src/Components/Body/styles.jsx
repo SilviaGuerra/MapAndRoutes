@@ -29,23 +29,27 @@ const styles = css({
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            padding: '80px 0px'
         },        
         '&_routes': {
-            width: '722px',
+            width: '100%',
             display: 'flex',
-            justifyContent: 'space-around',
+            justifyContent: 'center',
             ' > div:nth-child(1)': {
                 display: 'flex',
                 boxShadow: '0 7px 15px 0 rgba(0, 0, 0, 0.16)',
                 borderRadius: '40px'
             },
             '&-route': {
-                 width: '426px',
+                width: '426px',
+                cursor: 'pointer',
+                ' > div': {
+                    display: 'flex'
+                }
             },
             '&-schedule': {
-                width: '296px',
                 display: 'flex',
-                width: '41%',
+                width: '296px',
                 background: '#f8f8f8'
             }
         },
@@ -57,6 +61,12 @@ const styles = css({
                 width: '35% !important',
                 height: '50% !important'
             }
+        }
+    },
+    ' .route': {
+        '&_stations': {
+            display: 'flex',
+            flexDirection: 'column'
         }
     }
 });

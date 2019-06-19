@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Map from './Map/Map';
+import Schedule from './Schedule';
 
 import VanColors from '../../helpers/icons/VanColors';
 import styles from './styles';
 
-const Body = () => {
+
+const Body = (props) => {
+    const [route, setRoute] = useState(false);
+    const setSchedule = () => { setRoute(!route); };
+
     return (
         <section {...styles}>
             <section className="container_title">
@@ -18,15 +23,23 @@ const Body = () => {
                 <div>
                     <div className="container_routes-route">
                         <h2>Rutas</h2>
-                        <div>
+                        <div onClick={setSchedule}>
                             <VanColors />
-                            <p>juanacatlan</p>
-                            <p>Office depot sf</p>
+                            <div className="route_stations">
+                                <p>Juanacatlan</p>
+                                <p>Office depot sf</p>
+                            </div>
                         </div>
                     </div>
-                    <div className="container_routes-schedule">
-                        <h2>Horarios</h2>
-                    </div>
+                    {(() => {
+                        if(route) {
+                            return (
+                                <div className="container_routes-schedule">
+                                    <Schedule schedule="9 am"/>
+                                </div>
+                            )
+                        }
+                    })()}
                 </div>
                 <div className="container_map">
                     <Map />
