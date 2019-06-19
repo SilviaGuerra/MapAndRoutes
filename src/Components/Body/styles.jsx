@@ -1,12 +1,11 @@
 import { css } from 'glamor';
 
 const styles = css({
-    height: '500px',
+    height: '1504px',
     boxSizing: 'border-box',
     display: 'flex',
-    justifyContent: 'center',
     flexDirection: 'column',
-    margin: '85px 0px',
+    justifyContent: 'flex-start',
     color: '#252c41',
     ' h1': {
         fontSize: '3.188em',
@@ -33,9 +32,12 @@ const styles = css({
         },        
         '&_routes': {
             width: '100%',
+            height: '100%',
             display: 'flex',
             justifyContent: 'center',
+            alignItems: 'center',
             ' > div:nth-child(1)': {
+                height: '903px',
                 display: 'flex',
                 boxShadow: '0 7px 15px 0 rgba(0, 0, 0, 0.16)',
                 borderRadius: '40px'
