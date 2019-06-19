@@ -1,8 +1,8 @@
 import React from 'react';
 
-const VanColors = (color) => (
+const VanColors = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="25.683" height="89.637" viewBox="0 0 25.683 89.637">
-        <g id="Grupo_1397" dataName="Grupo 1397" fill={color} >
+        <g id="Grupo_1397" dataName="Grupo 1397" fill={props.color} >
             <path id="ic_airport_shuttle_24px" d="M19.678 5H3.335A2.365 2.365 0 0 0 1 7.395v10.776h2.335a3.551 3.551 0 0 0 3.5 3.592 3.551 3.551 0 0 0 3.5-3.592h6.425a3.5 3.5 0 1 0 7 0h2.919v-5.987zM3.335 12.184V7.395h7v4.789zm3.5 7.783a1.8 1.8 0 1 1 1.751-1.8 1.772 1.772 0 0 1-1.749 1.8zm9.181-7.783h-5.677V7.395h5.679zm4.244 7.783a1.8 1.8 0 1 1 1.751-1.8 1.772 1.772 0 0 1-1.749 1.8zm-3.206-7.783V7.395h1.455l4.67 4.789z" class="cls-1" transform="translate(-1 32.909)" />
             <g id="Grupo_1327" dataName="Grupo 1327" transform="rotate(-90 16.613 7.197)">
                 <circle id="Elipse_286" cx="3.501" cy="3.501" r="3.501" class="cls-1" dataName="Elipse 286" transform="translate(16.807)" />
