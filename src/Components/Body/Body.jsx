@@ -12,13 +12,15 @@ const getRandomColour = () => {
 
 const Body = (props) => {
     const [route, setRoute] = useState(false);
-    //const setSchedule = (item) => { setSchedule(item.schedule) };
+    const setOpen = () => { setRoute(!route) };
+    
     const [data, setData] = useState({ results: [] });
     const [schedule, setSchedule] = useState({ schedule: {} });
     console.log(schedule)
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async () => {
         const result = await axios(
-            //'https://gist.githubusercontent.com/SilviaGuerra/2db25ffda360ed056b6dd0bd6eeb5bf3/raw/255cdc01f221f0497ba2474df0c67ec6c9b5af75/test.json',
             'https://gist.githubusercontent.com/SilviaGuerra/d25c29a98ce3788296dbe405b617597e/raw/be7fe08e1339a5eba7dc8022a72792c14204dac0/gistfile1.txt'
         );
         setData(result.data.body);
@@ -38,12 +40,12 @@ const Body = (props) => {
                     <div className="container_routes-route">
                         <h2>Rutas</h2>
                         <div>
-                            <div className="route_stations">
+                            <div className="route_stations" onClick={setOpen}>
                                 <ul>
+                                    <VanColors color={getRandomColour()} />
                                     {data.results.map(item => (
                                         <li onClick={() => setSchedule(item.routes[0].schedule)}>
                                             <p>{item.routes[0].origin}</p>
-                                            <VanColors color={getRandomColour()} />
                                             <p>{item.routes[0].destination}</p>
                                         </li>
                                     ))}
@@ -52,7 +54,7 @@ const Body = (props) => {
                         </div>
                     </div>
                     {(() => {
-                        if (schedule.am) {
+                        if (schedule.am && route) {
                             return (
                                 <div className="container_routes-schedule">
                                     <Schedule schedule={schedule} />

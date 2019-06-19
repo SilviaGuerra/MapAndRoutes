@@ -24,6 +24,7 @@ const style = css({
             },
             '&_mail': {
                 alignSelf: 'flex-start',
+                padding: '5px 0px',
                 ' > svg': {
                     margin: '30px 0px -4px 0px'
                 },

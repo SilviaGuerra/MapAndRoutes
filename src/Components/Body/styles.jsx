@@ -22,6 +22,8 @@ const styles = css({
         fontSize: '2.5em',
         fontWeight: 300,
         lineHeight: 1.23,
+        paddingBottom: '45px',
+        paddingRight: '0px'
     },
     ' .container': {
         '&_title': {
@@ -45,9 +47,7 @@ const styles = css({
             '&-route': {
                 width: '426px',
                 cursor: 'pointer',
-                ' > div': {
-                    display: 'flex'
-                }
+                padding: '53px 0px 7px 63px',
             },
             '&-schedule': {
                 display: 'flex',
@@ -58,17 +58,27 @@ const styles = css({
         '&_map': {
             borderSizing: 'border-box',
             width: '500px', 
-            height: '400px',
+            height: '1063px',
             ' > div > div': {
-                width: '35% !important',
-                height: '50% !important'
+                width: '40% !important',
+                height: '90% !important'
             }
         }
     },
     ' .route': {
         '&_stations': {
-            display: 'flex',
-            flexDirection: 'column'
+            ' > ul': {
+                display: 'flex',
+                padding: '0px 10px',
+                ' > svg': {
+                    paddingTop: '0px',
+                    paddingRight: '20px' 
+                },
+                ' > li > p': {
+                    paddingBottom: '30px',
+                    paddingLeft: '0px'
+                }
+            }
         }
     }
 });
