@@ -16,7 +16,6 @@ const Body = (props) => {
     
     const [data, setData] = useState({ results: [] });
     const [schedule, setSchedule] = useState({ schedule: {} });
-    console.log(schedule)
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async () => {
@@ -39,18 +38,16 @@ const Body = (props) => {
                 <div>
                     <div className="container_routes-route">
                         <h2>Rutas</h2>
-                        <div>
-                            <div className="route_stations" onClick={setOpen}>
-                                <ul>
-                                    <VanColors color={getRandomColour()} />
-                                    {data.results.map(item => (
-                                        <li onClick={() => setSchedule(item.routes[0].schedule)}>
-                                            <p>{item.routes[0].origin}</p>
-                                            <p>{item.routes[0].destination}</p>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                        <div className="route_stations" onClick={setOpen}>
+                            <ul>
+                                {data.results.map(item => (
+                                    <li onClick={() => setSchedule(item.routes[0].schedule)}>
+                                        <p>{item.routes[0].origin}</p>
+                                        <VanColors color={getRandomColour()} />
+                                        <p>{item.routes[0].destination}</p>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                     {(() => {
@@ -73,7 +70,6 @@ const Body = (props) => {
 }
 
 export default Body;
-
 
 // import React, {useState, useEffect} from 'react';
 // import axios from 'axios';

@@ -13,7 +13,7 @@ class Footer extends Component {
                     <Support />
                     <div className="footer_support_service">
                         <h2>Customer Service:</h2>
-                        <p>Horario de atencion de 6AM a 10 PM</p>
+                        <p>Horario de atencion de 6 AM a 10 PM</p>
                     </div>
                     <div className="footer_support_mail">
                         <Mail />
@@ -21,8 +21,8 @@ class Footer extends Component {
                     </div>
                 </div>
                 <div className="footer_privacity">
-                    <a href="https://www.urbvan.com/aviso-privacidad" target="_blank">Politicas de privacidad</a>
-                    <a href="https://www.urbvan.com/terminos-condiciones" target="_blank">Términos y condiciones</a>
+                    <a href="https://www.urbvan.com/aviso-privacidad" target="_blank" rel="noopener noreferrer">Politicas de privacidad</a>
+                    <a href="https://www.urbvan.com/terminos-condiciones" target="_blank" rel="noopener noreferrer">Términos y condiciones</a>
                     <span>Urbvan ® 2018 es una marca registrada.</span>
                 </div>
             </footer>

@@ -8,9 +8,9 @@ const style = css({
     justifyContent: 'space-between',
     alignItems: 'center',
     ' svg': {
-        padding: '0px 5%'
+        padding: '0px 5%',
     },
-    ' div': {
+    ' nav': {
         width: '70%',
         height: '100%',
         background: '#f1404b',
@@ -20,6 +20,13 @@ const style = css({
         alignItems: 'center',
         color: '#fff',
         padding: '0px 60px'
+    },
+    ' ul': {
+        display: 'flex',
+        alignItems: 'center'
+    },
+    ' li': {
+        padding: '0px 20px'
     },
     ' a': {
         textDecoration: 'none',
@@ -71,6 +78,12 @@ const style = css({
             background: '#d43741',
             border: 'none',
             transition: '0.4s'
+        }
+    },
+
+    '@media screen and (max-width: 1200px)': {
+        ' a': {
+            fontSize: '1.063em',
         }
     },
 });
