@@ -50,6 +50,7 @@ const styles = css({
                 top: '400px',
                 left: '73px',
                 zIndex: 300,
+                background: '#fff',
                 boxShadow: '0 7px 15px 0 rgba(0, 0, 0, 0.16)',
                 borderRadius: '40px 0px 0px 40px',
                 ' > h2': {
