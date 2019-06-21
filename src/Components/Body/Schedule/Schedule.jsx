@@ -18,7 +18,7 @@ const Schedule = (props) => {
                 <h3>PM</h3>
                 <ul>
                     <li>
-                        <p>{props.schedule.am[0].departure_time}</p>
+                        <p>Llegar a las {props.schedule.am[0].departure_time}</p>
                     </li>
                 </ul>
             </div>

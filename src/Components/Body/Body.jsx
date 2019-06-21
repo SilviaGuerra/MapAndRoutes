@@ -40,10 +40,10 @@ const Body = (props) => {
                         <h2>Rutas</h2>
                         <div className="route_stations" onClick={setOpen}>
                             <ul>
+                                <VanColors color={getRandomColour()} />
                                 {data.results.map(item => (
                                     <li onClick={() => setSchedule(item.routes[0].schedule)}>
                                         <p>{item.routes[0].origin}</p>
-                                        <VanColors color={getRandomColour()} />
                                         <p>{item.routes[0].destination}</p>
                                     </li>
                                 ))}

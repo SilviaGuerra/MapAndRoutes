@@ -7,7 +7,8 @@ const style = css({
     minWidth: '400px',
     maxWidth: '1920px',
     fontFamily: 'HelveticaNeue',
-    fontSize: '16px'
+    fontSize: '16px',
+    overflow: 'hidden'
 });
 
 export default style;

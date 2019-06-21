@@ -42,17 +42,14 @@ const styles = css({
                 display: 'flex',
             },
             '&-route': {
-                // width: '426px',
-                // width: 'calc(100% - 1047px)',
                 width: '240px',
                 height: '300px',
                 cursor: 'pointer',
                 padding: '53px 0px 7px 30px',
-                // padding: '53px 0px 7px 61px',
                 position: 'absolute',
                 top: '400px',
                 left: '73px',
-                zIndex: 100,
+                zIndex: 300,
                 boxShadow: '0 7px 15px 0 rgba(0, 0, 0, 0.16)',
                 borderRadius: '40px 0px 0px 40px',
                 ' > h2': {
@@ -65,14 +62,14 @@ const styles = css({
             },
             '&-schedule': {
                 display: 'flex',
-                width: '296px',
+                width: '210px',
                 height: '300px',
                 background: '#f8f8f8',
                 padding: '53px 0px 7px 53px',
                 position: 'absolute',
                 top: '400px',
                 left: '315px',
-                zIndex: 100,
+                zIndex: 300,
                 boxShadow: '7px 3px 7px 0 rgba(0, 0, 0, 0.16)',
                 borderRadius: '0px 40px 40px 0px',
             }
@@ -97,12 +94,50 @@ const styles = css({
                     paddingRight: '20px' 
                 },
                 ' > li > p': {
-                    paddingBottom: '30px',
+                    paddingBottom: '50px',
                     paddingLeft: '0px'
                 }
             }
         }
-    }
+    },
+    '@media screen and (max-width: 960px)': {
+        ' h1': {
+            fontSize: '2.188em',
+            textAlign: 'left'
+        },
+        ' h2': {
+            fontSize: '1.313em',
+        },
+        ' .container': {
+            '&_title': {
+                padding: '60px 55px 0px',
+            },
+            '&_routes': {
+                '&-route': {
+                    width: '160px',
+                    top: '40px',
+                    padding: '53px 0px 7px 7px',
+                    '&_stations': {
+                        ' > ul': {
+                            ' > li > p': {
+                                fontSize: '15px'
+                            }
+                        }
+                    }
+                },
+                '&-schedule': {
+                    width: '120px',
+                    top: '40px',
+                    left: '225px'
+                }
+            },
+            '&_map': {
+                position: 'absolute',
+                top: '400px',
+                left: '70px',
+            }
+        }
+    },
 });
 
 export default styles;
