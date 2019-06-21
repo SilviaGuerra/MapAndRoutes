@@ -100,13 +100,10 @@ const styles = css({
             }
         }
     },
-    '@media screen and (max-width: 960px)': {
-        ' h1': {
+    '@media screen and (max-width: 600px)': {
+        ' > h1': {
             fontSize: '2.188em',
             textAlign: 'left'
-        },
-        ' h2': {
-            fontSize: '1.313em',
         },
         ' .container': {
             '&_title': {
@@ -117,6 +114,9 @@ const styles = css({
                     width: '160px',
                     top: '40px',
                     padding: '53px 0px 7px 7px',
+                    ' h2': {
+                        fontSize: '1.313em',
+                    },
                     '&_stations': {
                         ' > ul': {
                             ' > li > p': {
@@ -135,6 +135,7 @@ const styles = css({
                 position: 'absolute',
                 top: '400px',
                 left: '70px',
+                height: '900px' 
             }
         }
     },

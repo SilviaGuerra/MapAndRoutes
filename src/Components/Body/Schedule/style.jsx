@@ -25,7 +25,19 @@ const style = css({
     },
     ' li': {
         paddingBottom: '25px'
-    }
+    },
+    '@media screen and (max-width: 600px)': {
+        ' h2': {
+            fontSize: '1.313em',
+        },
+        ' h3': {
+            fontSize: '1.250em',
+            padding: '0px 35px'
+        },
+        ' > p': {
+            fontSize: '0.938em'
+        }
+    },
 });
 
 export default style;
